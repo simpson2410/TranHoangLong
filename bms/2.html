@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Trailer Site</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index">
+            <img src="logo.png" height="30" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="1">Submission 1</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="2">Submission 2 <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="refiners">
+        <select id="languages" multiple="multiple">
+        </select>
+        <select id="genres" multiple="multiple">
+        </select>
+        <div id="selected-refiners"></div>
+    </div>
+    <div class="container">
+        <div class="jumbotron hidden" id="error-notification">
+            <h1 class="display-4">Oops...</h1>
+            <hr class="my-4">
+            <p>No events available at the moment, please check again later.</p>
+        </div>
+        <div class="row text-center" id="thumbnails">
+        </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js""></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"> </script>
+        <script src="2.js"></script>
+    <button onclick="topFunction()" id="scroll-top" title="Go to top" class="btn btn-light">▲</button>
+    <script>
+        //Get the button:
+        let scrollTopButton = document.getElementById("scroll-top");
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopButton.style.display = "block";
+            } else {
+                scrollTopButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            window.scrollBy({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+
+</html>
